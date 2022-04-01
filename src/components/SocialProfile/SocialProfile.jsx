@@ -1,31 +1,31 @@
-import css from './SocialProfile.module.css';
+import {UserProfile, UserDescription, Avatar, Name, TagLocation, Statistic, StatisticItem, StatisticQuantity, SratisticLable} from './SocialProfile.styled';
 import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <UserProfile>
+      <UserDescription>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <TagLocation>{tag}</TagLocation>
+        <TagLocation>{location}</TagLocation>
+      </UserDescription>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Statistic>
+        <StatisticItem>
+          <SratisticLable>Followers</SratisticLable>
+          <StatisticQuantity>{stats.followers}</StatisticQuantity>
+        </StatisticItem>
+        <StatisticItem>
+          <SratisticLable>Views</SratisticLable>
+          <StatisticQuantity>{stats.views}</StatisticQuantity>
+        </StatisticItem>
+        <StatisticItem>
+          <SratisticLable>Likes</SratisticLable>
+          <StatisticQuantity>{stats.likes}</StatisticQuantity>
+        </StatisticItem>
+      </Statistic>
+    </UserProfile>
   );
 };
 

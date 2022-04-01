@@ -1,14 +1,14 @@
-import css from './FriendList.module.css';
+import { CardItem, OnOffUser, UserName, UserPhoto} from "./FriendList.styled."
 import PropTypes from 'prop-types';
 
 export const FriendCard = ({ avatar, name, isOnline, id }) => {
   return (
     <>
-      <li className={css.item} key={id}>
-        <span className={isOnline ? css.onLine : css.offLine}>{isOnline}</span>
-        <img className={css.avatar} src={avatar} alt={name} width="48" />
-        <p className={css.name}>{name}</p>
-      </li>
+      <CardItem key={id}>
+        <OnOffUser isOnline={isOnline}>{isOnline}</OnOffUser>
+        <UserPhoto src={avatar} alt={name} width="48" />
+        <UserName>{name}</UserName>
+      </CardItem>
     </>
   );
 };

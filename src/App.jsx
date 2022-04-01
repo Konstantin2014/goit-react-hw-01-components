@@ -4,8 +4,8 @@ import { Statistics } from './components/Statistics/Statistics';
 import data from './components/Statistics/data.json';
 import { FriendList } from './components/FriendList/FriendList';
 import friends from './components/FriendList/friends.json';
-// import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
-// import transactions from "./components/TransactionHistory/transaction.json";
+import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
+import transactions from "./components/TransactionHistory/transaction.json";
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
@@ -19,11 +19,19 @@ export const App = () => {
         stats={stats}
       />
       ,
-      <Statistics title="UPLOAD STATS" stats={data} />,
-      <FriendList friends={friends} />,
-      {/* <TransactionHistory 
+      <Statistics 
+      title="UPLOAD STATS" 
+      stats={data} 
+      />
+      ,
+      <FriendList 
+      friends={friends} 
+      />
+      ,
+      <TransactionHistory 
       items={transactions}
-      />, */}
+      />
+      ,
     </div>
   );
 };
