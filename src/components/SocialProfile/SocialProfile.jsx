@@ -1,4 +1,5 @@
-import {UserProfile, UserDescription, Avatar, Name, TagLocation, Statistic, StatisticItem, StatisticQuantity, SratisticLable} from './SocialProfile.styled';
+import {UserProfile, UserDescription, Avatar, Name, TagLocation, 
+  Statistic, StatisticItem, StatisticQuantity, SratisticLable} from './SocialProfile.styled';
 import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
