@@ -25,14 +25,12 @@ export const TableRows = styled.tr`
 height: 40px;
 color: grey;
 background-color: #f2f2f2;
-`;
 
+&:nth-child(n + 1) {
+  background-color: #ffffff;
+}
 
-// .row:nth-child(n + 1) {
-//   background-color: #ffffff;
-// }
-
-// .row:nth-child(2n + 1) {
-//   background-color: #f2f2f2;
-// }
+&:nth-child(2n + 1) {
+  background-color: #f2f2f2;
+}`;
 
