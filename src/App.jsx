@@ -20,7 +20,7 @@ export const App = () => {
       />
       ,
       <Statistics 
-      title="UPLOAD STATS" 
+      title="UPLOAD STATS"
       stats={data} 
       />
       ,
