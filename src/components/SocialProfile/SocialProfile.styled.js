@@ -11,7 +11,7 @@ export const UserDescription = styled.div`
   text-align: center;
 `;
 
-export const Avatar = styled.img`
+export const UserAvatar = styled.img`
   padding-top: 45px;
   width: auto;
   height: 110px;
@@ -19,7 +19,7 @@ export const Avatar = styled.img`
   margin: auto;
 `;
 
-export const Name = styled.p`
+export const UserName = styled.p`
   margin-top: 20px;
   font-size: 30px;
   font-weight: 700;
@@ -44,18 +44,17 @@ export const StatisticItem = styled.li`
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 20px;  
+  padding-bottom: 20px;
   border: solid 1px #d8e0ea;
   width: 100px;
   color: #1b1b1b;
 `;
 
 export const StatisticQuantity = styled.span`
-font-weight: 700;
-font-size: 15px;
+  font-weight: 700;
+  font-size: 15px;
 `;
 
 export const SratisticLable = styled.span`
-font-size: 18px;
+  font-size: 18px;
 `;
-

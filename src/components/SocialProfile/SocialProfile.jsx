@@ -1,13 +1,22 @@
-import {UserProfile, UserDescription, Avatar, Name, TagLocation, 
-  Statistic, StatisticItem, StatisticQuantity, SratisticLable} from './SocialProfile.styled';
+import {
+  UserProfile,
+  UserDescription,
+  UserAvatar,
+  UserName,
+  TagLocation,
+  Statistic,
+  StatisticItem,
+  StatisticQuantity,
+  SratisticLable,
+} from './SocialProfile.styled';
 import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <UserProfile>
       <UserDescription>
-        <Avatar src={avatar} alt={username} />
-        <Name>{username}</Name>
+        <UserAvatar src={avatar} alt={username} />
+        <UserName>{username}</UserName>
         <TagLocation>{tag}</TagLocation>
         <TagLocation>{location}</TagLocation>
       </UserDescription>
@@ -35,11 +44,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    })
-  ),
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
